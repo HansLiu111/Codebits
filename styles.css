@@ -1,0 +1,218 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #36393f;
+}
+
+#app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #202225;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.snippets-list {
+    padding: 10px;
+}
+
+.snippets-list h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.snippets-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.snippets-list li {
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.snippets-list li:hover {
+    background-color: #2e3338;
+}
+
+.snippet-delete-icon {
+    display: none;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.snippets-list li:hover .snippet-delete-icon {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.editor {
+    margin-bottom: 20px;
+}
+
+.editor textarea {
+    width: calc(100% - 20px);
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #40444b;
+    color: white;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    resize: vertical;
+}
+
+#addButton {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #7289da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addButton:hover {
+    background-color: #677bc4;
+}
+
+#snippetList {
+    background-color: #40444b;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.snippet-item {
+    margin-bottom: 20px;
+}
+
+.snippet-code {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    background-color: #2f3136;
+    color: white;
+    overflow-x: auto;
+}
+
+.selected-snippet {
+    padding: 10px;
+    background-color: #202225;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.selected-snippet h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #7289da;
+}
+
+.selected-snippet input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #7289da;
+    border-radius: 5px;
+    background-color: #40444b;
+    color: white;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.selected-snippet input[type="text"]::placeholder {
+    color: #7289da;
+}
+
+.selected-snippet input[type="text"]:focus {
+    outline: none;
+    border-color: #677bc4;
+}
+
+.editor input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #7289da;
+    border-radius: 5px;
+    background-color: #40444b;
+    color: white;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: border-color 0.2s;
+}
+
+#snippetTagsInput {
+    width: calc(100% - 80px);
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #7289da;
+    border-radius: 5px;
+    background-color: #40444b;
+    color: white;
+    font-family: "Fira Code", monospace;
+    font-size: 12px;
+    transition: border-color 0.2s;
+}
+
+#snippetTagsInput::placeholder {
+    color: #7289da;
+}
+
+#snippetTagsInput:focus {
+    outline: none;
+    border-color: #677bc4;
+}
+
+.tag-filter-container {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.tag-button {
+    padding: 6px 12px;
+    background-color: #7289da;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.tag-button:hover {
+    background-color: #677bc4;
+}

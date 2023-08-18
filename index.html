@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Codebits</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Discord Logo">
+            </div>
+            <div class="snippets-list">
+                <h2>Code Snippets</h2>
+                <ul id="snippetNav"></ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="editor">
+                <textarea id="snippetInput" placeholder="Paste your code snippet here"></textarea>
+                <input type="text" id="snippetTitleInput" placeholder="Enter a title for the snippet">
+                <button id="addButton">Add Snippet</button>
+
+                <div class="tag-filter-container" id="tagFilterContainer">
+                    <!-- Tags will be dynamically added here -->
+                </div>
+            </div>
+            
+            <input
+            type="text"
+            id="snippetTagsInput"
+            placeholder="Enter tags (Comma-Seperated)"
+            />
+            <div class="selected-snippet">
+                <h2>Selected Snippet</h2>
+                <div id="selectedSnippet"></div>
+            </div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
